@@ -50,8 +50,8 @@ Entre no site oficial do [Node](https://nodejs.org/en/download/current). Baixe a
 Para iniciar o projeto, o frontend será dados baixe ele como, em seguida entre na pasta
 
 ``````bash
-git <LINK do REPO AQUI>
-cd <node da pasta>
+git clone https://github.com/petcompgroup/bootcamp_node_2024.git
+cd bootcamp_node_2024
 ``````
 Agora a unica coisa que temos é uma pasta chamada frontend, entre nele e instale a as dependencias e rode o para verificar
 ```bash 
@@ -60,7 +60,7 @@ npm install # Instala todas as depêndendicas
 npm run dev # Roda a aplicação frontend
 ```
 
-<PRECISO ISERIR UMA IMAGEN AQUI do aplicação rodando sem back end>
+![Imagem do frontend puro]()
 
 Agora temos um aplicação rodando, mas ela ainda não é funcional, pois não existe um backend para dar lógica e gerenciar o armazenamento dos dados.  Vamos iniciar agora a construção da API, volte para a pasta raiz do projeto crie uma pasta backend pela interface ou pelo comando `mkdir backend` e entre nela.
 
