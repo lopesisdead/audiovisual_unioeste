@@ -60,7 +60,7 @@ npm install # Instala todas as depêndendicas
 npm run dev # Roda a aplicação frontend
 ```
 
-![Imagem do frontend puro]()
+![Imagem do frontend puro](.\imagem(ignorar)\frontendSemBack.png)
 
 Agora temos um aplicação rodando, mas ela ainda não é funcional, pois não existe um backend para dar lógica e gerenciar o armazenamento dos dados.  Vamos iniciar agora a construção da API, volte para a pasta raiz do projeto crie uma pasta backend pela interface ou pelo comando `mkdir backend` e entre nela.
 
