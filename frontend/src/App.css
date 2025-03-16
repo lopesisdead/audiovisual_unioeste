@@ -1,27 +1,451 @@
-.App{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    padding: 2rem;
-    flex-direction: column;
-}
-header{
-    display: flex;
-    width: 100%;
+/* Estilos globais */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-
+/* Container principal */
+.App {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.MainText{
-    font-size: 2rem;
-    font-weight: 700;
-    color: #1b1a1a;
+/* Cabeçalho */
+/* Cabeçalho */
+.cabecalho {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
+.logo {
+  width: 180px;
+  margin-bottom: 1.5rem;
+}
+
+/* Grupo de inputs */
+.input-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.form {
+  gap: 1.5rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+/* Conteúdo principal */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Texto principal */
+.MainText {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b1a1a;
+  margin-bottom: 1rem;
+}
+
+/* Container para formulários e outros conteúdos */
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Container de formulário */
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-container2 {
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Títulos */
+h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Campos de entrada */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  color: black; /* Garante que o texto dos inputs seja preto */
+}
+
+.input-field:focus {
+  border-color: #007bff;
+}
+
+/* Dropdown e opções */
+.input-field option {
+  color: black;
+}
+
+/* Grupo de checkboxes */
+.checkbox-group {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+/* Botão de envio */
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.nome-sala {
+  font-weight: 600;
+  color: #2c3e50;
+  padding: 0 1rem;
+}
+
+/* Estilos específicos para nome e email */
+.nome-requisitante {
+  font-weight: 500;
+  color: #333;
+  padding-right: 1rem; /* Espaço extra à direita */
+}
+
+.email-requisitante {
+  color: #666;
+  padding-left: 1rem; /* Espaço extra à esquerda */
+  border-left: 1px solid #eee; /* Linha divisória opcional */
+}
+
+.linha-emprestimo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #eee;
+  background: white;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Grupo de informações */
+.grupo-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Itens individuais */
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.valor {
+  font-weight: 500;
+  color: #333;
+  word-break: break-word;
+}
+
+/* Grupo de botões */
+.grupo-botoes {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.form-emprestimo {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.checkbox-group-emprestimo {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border: 1px solid #eee;
+}
+
+.checkbox-group-emprestimo label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: #495057;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.checkbox-group-emprestimo label:hover {
+  color: #007bff;
+}
+
+.checkbox-group-emprestimo input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #007bff;
+  cursor: pointer;
+}
+
+.mensagem-erro {
+  color: #dc3545;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  background: #f8d7da;
+  border-radius: 4px;
+  border: 1px solid #f5c6cb;
+}
+
+/* Adicione ao App.css */
+.senha-info {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.senha-gerada {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background: #28a745;
+  color: white;
+  border-radius: 6px;
+  font-family: monospace;
+  word-break: break-all;
+}
+
+/* Estilos da Listagem */
+.lista-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.lista-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.lista-item:hover {
+  transform: translateY(-2px);
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-titulo {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.item-subtitulo {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-top: 0.3rem;
+}
+
+.item-acoes {
+  display: flex;
+  gap: 1rem;
+}
+
+.acao-editar,
+.acao-excluir {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.acao-editar {
+  background-color: #3498db;
+  color: white;
+}
+
+.acao-excluir {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.acao-editar:hover,
+.acao-excluir:hover {
+  opacity: 0.9;
+}
+
+/* Container principal */
+.lista-container-funcionarios {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Card de funcionário */
+.funcionario-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+}
+
+.funcionario-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.funcionario-detalhes {
+  flex: 1;
+  min-width: 0;
+}
+
+.funcionario-nome {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+  word-break: break-word;
+}
+
+.funcionario-email {
+  display: block;
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  word-break: break-all;
+}
+
+/* Ações */
+.funcionario-acoes {
+  display: flex;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.btn-editar,
+.btn-excluir {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-editar {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-excluir {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-editar:hover,
+.btn-excluir:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .funcionario-info {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  
+  .funcionario-acoes {
+      width: 100%;
+      justify-content: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .funcionario-acoes {
+      flex-direction: column;
+  }
+  
+  .btn-editar,
+  .btn-excluir {
+      justify-content: center;
+  }
+}

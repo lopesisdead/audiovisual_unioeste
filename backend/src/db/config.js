@@ -1,9 +1,13 @@
-import sqlite3 from 'sqlite3';
-import {open} from 'sqlite';
+import mysql from "mysql2/promise";
+import dotenv from "dotenv";
 
-export async function openDB(){
-    return open({
-        filename:"./src/db/tasks.db",
-        driver: sqlite3.Database
-    })
-}
+dotenv.config(); // Carrega as variáveis do .env
+
+const db = await mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
+});
+
+export default db;
